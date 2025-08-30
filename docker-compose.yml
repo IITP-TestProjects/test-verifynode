@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  vs1:
+    container_name: verify-server1
+    image: verifier:0.1
+    ports:
+      - "50053:50053"
+    networks:
+      - bc_interface
+
+networks:
+  bc_interface:
+    driver: bridge
